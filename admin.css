@@ -1,0 +1,14 @@
+.gtaddon-pair,
+.gtaddon-pair-options {
+	display: flex;
+	align-items: center;
+}
+
+.gtaddon-pair-options {
+	gap: 5px;	
+}
+
+.gtaddon-pair {
+	gap: 20px;	
+	margin: 10px 0;
+}
