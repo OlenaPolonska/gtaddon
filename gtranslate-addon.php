@@ -26,6 +26,10 @@ class GTranslate_Addon {
 		add_action( "wp_ajax_nopriv_add_pair", array( $this, 'add_pair' ) );
 	}
 	
+	function getDefaultLanguage() {
+		return $this->default_language;
+	}
+	
 	function add_pair() {
 		$index = absint( $_REQUEST['index'] );
 		echo $this->render_translation_pair( $index );
@@ -100,13 +104,14 @@ class GTranslate_Addon {
 
 };
 
-$GTAddon = new GTranslate_Addon;
-
 add_action( 'wp_enqueue_scripts', function() {
+	$GTAddon = new GTranslate_Addon;
+
 	wp_enqueue_script( 'gtranslate-addon-js', plugin_dir_url( __FILE__ ) . '/public.js', array( 'jquery' ) );
     wp_localize_script( 'gtranslate-addon-js', 'gtHelper',
         array( 
 			'translationPairs' => array_column( get_option('gtaddon_translations'), 'to_word', 'from_word' ),
+			'defaultLanguage' => $GTAddon->getDefaultLanguage(),
         )
     );
 } );

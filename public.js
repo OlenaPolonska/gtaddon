@@ -20,8 +20,8 @@
 
 	function customTranslateToEnglish() {
 		const translations = gtHelper.translationPairs;
-
-		if ( gt_get_lang() == 'en' ) {
+		
+		if ( gt_get_lang() !== gtHelper.defaultLanguage ) {
 			Object.keys(translations).forEach(function( key ) {
 				$(`.notranslate:contains(${key})`).text( translations[key] );
 			});
@@ -38,7 +38,7 @@
 
 	function gt_get_lang() {
 		var keyValue = document.cookie.match('(^|;) ?googtrans=([^;]*)(;|$)');
-		return keyValue ? keyValue[2].split('/')[2] : null;	
+		return keyValue ? keyValue[2].split('/')[2] : gtHelper.defaultLanguage;	
 	}
 	
 })(jQuery);
