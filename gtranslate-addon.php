@@ -5,7 +5,7 @@
  * The Settings page appears in the Settings menu 
  * Version: 2.0
  * Author: ELP
- * License: GPL2
+ * License: GPLv3 or later
  * Text Domain: gtad
  * Requires at least: 5.8
  * Requires PHP: 7.4
