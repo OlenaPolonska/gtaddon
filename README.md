@@ -1,4 +1,6 @@
 ELP GTranslate Custom Translation Bridge
+![Admin Settings Interface](images/admin-settings.png)
+
 🚀 The Problem & The Mission
 
 This plugin was developed for Frida (https://frida-art.eu/), a community of female artists with a limited budget. They were using the free version of the GTranslate plugin but needed to manually override specific phrases for better UX and artistic context.
