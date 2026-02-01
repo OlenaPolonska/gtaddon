@@ -1,4 +1,5 @@
 ELP GTranslate Custom Translation Bridge
+<br>
 <img src="images/Screenshot.png" alt="Admin Settings Interface" width="600">
 
 🚀 The Problem & The Mission
